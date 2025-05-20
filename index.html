@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grampo Sul</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#" class="logo-link">
+            <img src="img/grampos-sul-red-1-1-1.png" alt="Logo Grampo Sul" class="logo" />
+        </a>
+        <button class="toggle-button" aria-label="Abrir menu">☰</button>
+        <ul class="sidenav">
+            <li><a class="active" href="#">Início</a></li>
+            <li><a href="#produtos.html">Produtos</a></li>
+            <li><a href="#quemSomos.html">Quem Somos</a></li>
+            <li><a href="#representantes.html">Representantes</a></li>
+            <li><a href="#contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="content">
+        <h1>Bem-vindo à Grampo Sul</h1>
+        <p>Excelência, inovação e compromisso com o futuro.</p>
+
+        <!-- CAROUSEL -->
+        <div id="carousel-industria" class="carousel slide" data-ride="carousel" style="margin-top: 2rem;">
+
+            <!-- Indicadores -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-industria" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-industria" data-slide-to="1"></li>
+                <li data-target="#carousel-industria" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img/GramposulFachada.webp" alt="Imagem 1" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h3>Unidade de Produção A</h3>
+                        <p>Alta performance e eficiência.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/GramposulFachada.webp" alt="Imagem 2" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h3>Centro Logístico</h3>
+                        <p>Distribuição estratégica e ágil.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/GramposulFachada.webp" alt="Imagem 3" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h3>Equipe de Engenharia</h3>
+                        <p>Inovação com tecnologia de ponta.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <a class="left carousel-control" href="#carousel-industria" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-industria" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Missao, Visão e Valores -->
+    <section class="mvv-section">
+        <div class="mvv-container">
+            <h2>Missão, Visão e Valores</h2>
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <h3>Missão</h3>
+                    <p>Oferecer grampos e fixadores de alta qualidade, projetados para garantir a durabilidade e
+                        segurança dos móveis, contribuindo para o sucesso de nossos clientes na indústria de móveis e
+                        marcenaria. Estamos comprometidos em fornecer produtos inovadores que atendem às necessidades de
+                        cada projeto.</p>
+                </div>
+                <div class="mvv-card">
+                    <h3>Visão</h3>
+                    <p>Ser a líder nacional na fabricação e distribuição de grampos industriais, reconhecida por sua
+                        excelência, confiabilidade e pela capacidade de transformar os processos produtivos dos nossos
+                        clientes. Queremos ser a escolha preferida dos fabricantes de móveis, oferecendo sempre as
+                        melhores soluções em fixação.</p>
+                </div>
+                <div class="mvv-card">
+                    <h3>Valores</h3>
+                    <p>Valorizamos a qualidade, a inovação e a sustentabilidade. Estamos comprometidos em fornecer
+                        soluções que garantem a eficiência dos processos industriais de nossos clientes. A ética, a
+                        confiança e o respeito pelos nossos parceiros são fundamentais para o nosso sucesso. Buscamos
+                        sempre oferecer um atendimento de excelência e produtos que superem as expectativas do mercado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="scroll-to-top-btn">↑ Voltar ao Topo</button>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <p>&copy; 2025 Grampo Sul. Todos os direitos reservados.</p>
+        <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Rua Capitão de Coroa, 251 - Arapongas
+            - PR</p>
+        <p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <a href="tel:+554332763178"
+                style="color: inherit; text-decoration: underline;">(43) 3276-3178</a></p>
+        <p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a
+                href="mailto:contato@grampossul.com.br"
+                style="color: inherit; text-decoration: underline;">contato@grampossul.com.br</a></p>
+    </footer>
+
+    <!-- JS Personalizado -->
+    <script src="script.js"></script>
+    <script>
+        // Mostrar/Ocultar o botão de voltar ao topo baseado no scroll
+        window.onscroll = function() {
+            var scrollToTopBtn = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.classList.add("show");
+            } else {
+                scrollToTopBtn.classList.remove("show");
+            }
+        };
+
+        // Ao clicar no botão, voltar ao topo
+        document.getElementById("backToTop").onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body>
+
+</html>
