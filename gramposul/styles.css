@@ -1,0 +1,348 @@
+/* ===================== */
+/* VARIÁVEIS DE COR E BASE */
+/* ===================== */
+:root {
+  --primary-color: #1e2d3b; /* Azul escuro (60%) */
+  --secondary-color: #d4af37; /* Dourado suave (30%) */
+  --accent-color: #f1f1f1; /* Cinza claro suave (10%) */
+  --font-color-light: #ffffff;
+  --font-color-dark: #2a2a2a;
+  --text-color-light: #e0e0e0;
+  --text-color-dark: #444;
+  --bg-color-light: #f4f5f7; /* Fundo claro suave */
+  --bg-overlay-color: rgba(0, 0, 0, 0.65);
+  --font-family: 'Poppins', sans-serif;
+  --font-size-base: 1.125rem; /* Tamanho de fonte base */
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2.618rem; /* Tamanho extra grande */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+}
+
+/* ===================== */
+/* RESET DE ESTILOS GERAIS */
+/* ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.618;
+  background-color: var(--bg-color-light);
+  color: var(--font-color-dark);
+  font-size: var(--font-size-base);
+}
+
+/* ===================== */
+/* NAVBAR FIXA */
+/* ===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 2.618rem 1.618rem;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 55px;
+  width: auto;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--font-color-light);
+  cursor: pointer;
+  display: none;
+}
+
+/* SIDENAV */
+.sidenav {
+  list-style: none;
+  display: flex;
+  gap: 1.618rem;
+}
+
+.sidenav li a {
+  color: var(--font-color-light);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-lg);
+  padding: 0.618rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.sidenav li a:hover,
+.sidenav li a.active {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 4px;
+}
+
+/* ===================== */
+/* CONTEÚDO */
+/* ===================== */
+.content {
+  padding: 10rem 2rem 6rem 2rem; /* 10rem para compensar navbar fixa */
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.content h1 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.content p {
+  font-size: var(--font-size-lg);
+  margin-bottom: 2rem;
+  color: var(--text-color-dark);
+}
+
+/* ===================== */
+/* CAROUSEL */
+/* ===================== */
+.carousel-inner > .item > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bg-overlay-color);
+  padding: 1.5rem 2rem;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+  border-radius: 8px;
+  color: var(--secondary-color);
+  font-weight: var(--font-weight-bold);
+}
+
+.carousel-caption h3 {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--secondary-color);
+}
+
+.carousel-caption p {
+  color: var(--text-color-light);
+  font-size: var(--font-size-lg);
+}
+
+/* ===================== */
+/* MISSÃO, VISÃO E VALORES */
+.mvv-section {
+  background-color: var(--bg-color-light);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 3px solid var(--primary-color);
+  margin-bottom: 8rem; /* Ajustei para garantir que o grid não fique colado no rodapé */
+}
+
+.mvv-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mvv-section h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.mvv-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mvv-card {
+  background-color: var(--font-color-light);
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex: 1 1 280px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mvv-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mvv-card h3 {
+  color: var(--secondary-color);
+  font-size: var(--font-size-xl);
+  margin-bottom: 1.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.mvv-card p {
+  color: var(--text-color-dark);
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ===================== */
+/* FOOTER FIXO */
+/* ===================== */
+.footer {
+  position: relative; /* Modificado para evitar sobreposição */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--font-color-light);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.125rem;
+  z-index: 1000;
+}
+
+.footer p {
+  margin: 0.4rem 0;
+}
+
+.footer span.glyphicon {
+  margin-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.footer a {
+  color: var(--font-color-light);
+  text-decoration: underline;
+}
+
+/* ===================== */
+/* RESPONSIVO */
+/* ===================== */
+@media (max-width: 900px) {
+  .toggle-button {
+    display: block;
+  }
+
+  .sidenav {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .sidenav.active {
+    display: flex;
+  }
+
+  .sidenav li {
+    text-align: center;
+  }
+
+  .sidenav li a {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .carousel-caption {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .content h1 {
+    font-size: 2.25rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.6rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+/* Efeito de mudança de cor na navbar quando rolar */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Exemplo: fundo preto com transparência */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+/* Para melhorar a visibilidade dos itens da navbar quando rolar */
+.navbar.scrolled .sidenav li a {
+  color: #fff; /* Muda a cor do texto dos links */
+}
+
+/* Estilos do botão de "voltar ao topo" */
+#backToTop {
+  position: fixed;
+  bottom: 80px; /* Ajuste o valor para garantir que o botão apareça acima do rodapé */
+  right: 20px;
+  background-color: var(--secondary-color); /* Cor de fundo (Dourado suave) */
+  color: var(--font-color-dark); /* Cor do texto */
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0; /* Começa invisível */
+  transform: translateY(20px); /* Começa um pouco abaixo da posição final */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Animação de fade e movimento */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1001; /* Garantir que o botão esteja acima de outros elementos, como o rodapé */
+}
+
+#backToTop.show {
+  opacity: 1; /* Aparece */
+  transform: translateY(0); /* Desliza para a posição final */
+}
+
+#backToTop:hover {
+  background-color: var(--primary-color); /* Cor de fundo quando passa o mouse (Azul escuro) */
+  color: var(--font-color-light); /* Cor do texto em branco quando hover */
+}
+
